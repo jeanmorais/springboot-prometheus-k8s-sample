@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: app-player-ingress
+spec:
+  rules:
+  - host: api.jeanmorais.tk
+    http:
+      paths:
+      - backend:
+          serviceName: app-player
+          servicePort: 8080

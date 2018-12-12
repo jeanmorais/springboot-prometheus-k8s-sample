@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-player
+  namespace: default
+  labels:
+    app: app-player
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-player
+  template:
+    metadata:
+      labels:
+        app: app-player
+    spec:
+      containers:
+      - name: app-player
+        image: jeanmorais/app-player:0.0.1
+        ports:
+        - name: web
+          containerPort: 8080
+          
+          

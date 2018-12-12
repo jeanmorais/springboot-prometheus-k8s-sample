@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: app-player
+  labels:
+    app: app-player
+spec:
+  selector:
+    app: app-player
+  ports:
+  - name: web
+    port: 8080
