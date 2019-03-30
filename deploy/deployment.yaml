@@ -18,6 +18,9 @@ spec:
       containers:
       - name: app-player
         image: jeanmorais/app-player:0.0.1
+        resources:
+          limits:
+            memory: "512M"
         ports:
         - name: web
           containerPort: 8080
