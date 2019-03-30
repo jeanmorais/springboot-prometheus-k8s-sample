@@ -3,7 +3,8 @@ kind: ServiceMonitor
 metadata:
   name: app-player
   labels:
-    prometheus: kube-prometheus
+    app: app-player
+    release: my-release
 spec:
   selector:
     matchLabels:
